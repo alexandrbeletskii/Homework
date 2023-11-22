@@ -14,6 +14,9 @@ while (n > 0)
  
  for (int i = 0; i < y; i++)
 {
- Console.Write($"{result%10},");
+if (i < y - 1) Console.Write($"{result%10},");
+else Console.Write($"{result%10}");
 result /= 10;
 }
+
+ 
