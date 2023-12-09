@@ -1,37 +1,37 @@
 ﻿// Задайте двумерный массив. Напишите программу, которая поменяет местами первую и последнюю строку массива.
 
- void InputMatrix(int[,] matrix){
-for(int i = 0; i < matrix.GetLength(0); i++)
+ void InputMatrix(int[,] matr){
+for(int i = 0; i < matr.GetLength(0); i++)
 {
-for (int j = 0; j < matrix.GetLength(1); j++)
+for (int j = 0; j < matr.GetLength(1); j++)
 {
-matrix[i, j] = new Random().Next(1, 31);
+matr[i, j] = new Random().Next(1, 31);
 }
 }
  }
 
 
-void PrintMatrix(int[,] matrix){
-for(int i = 0; i < matrix.GetLength(0); i++)
+void PrintMatrix(int[,] matr){
+for(int i = 0; i < matr.GetLength(0); i++)
 {
-for (int j = 0; j < matrix.GetLength(1); j++)
+for (int j = 0; j < matr.GetLength(1); j++)
 {
-Console.Write($"{matrix[i, j]} \t");
+Console.Write($"{matr[i, j]} \t");
 }
 Console.WriteLine();
 }
 }
 
-void ReplaceRows (int[,] matrix){
+void ReplaceRows (int[,] matr){
     int temp;
-    int length = matrix.GetLength(0) - 1;
+    int length = matr.GetLength(0) - 1;
     for (int i = 0; i < length; i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < matr.GetLength(1); j++)
         {
-                temp = matrix[0, j];
-                matrix[0, j] = matrix[length, j];
-                matrix[length, j] = temp;
+                temp = matr[0, j];
+                matr[0, j] = matr[length, j];
+                matr[length, j] = temp;
                 i++;
             }
 
