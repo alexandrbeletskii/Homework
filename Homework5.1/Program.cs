@@ -1,22 +1,22 @@
 ﻿// // // Задача 1: Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
 
- void InputMatrix(int[,] matrix){
-for(int i = 0; i < matrix.GetLength(0); i++)
+ void InputMatrix(int[,] matr){
+for(int i = 0; i < matr.GetLength(0); i++)
 {
-for (int j = 0; j < matrix.GetLength(1); j++)
+for (int j = 0; j < matr.GetLength(1); j++)
 {
-matrix[i, j] = new Random().Next(1, 31);
+matr[i, j] = new Random().Next(1, 31);
 }
 }
  }
 
 
-void PrintMatrix(int[,] matrix){
-for(int i = 0; i < matrix.GetLength(0); i++)
+void PrintMatrix(int[,] matr){
+for(int i = 0; i < matr.GetLength(0); i++)
 {
-for (int j = 0; j < matrix.GetLength(1); j++)
+for (int j = 0; j < matr.GetLength(1); j++)
 {
-Console.Write($"{matrix[i, j]} \t");
+Console.Write($"{matr[i, j]} \t");
 }
 Console.WriteLine();
 }
